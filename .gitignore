@@ -1,0 +1,63 @@
+# ====================
+# Системные файлы ОС
+# ====================
+
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.swp
+.swx
+.swo
+
+# ====================
+# Файлы среды разработки (IDE)
+# ====================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains (IntelliJ, PyCharm и др.)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Visual Studio
+bin/
+obj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ====================
+# Временные файлы и логи
+# ====================
+
+*.log
+*.tmp
+*.temp
+logs/
+tmp/
+temp/
+
+# ====================
+# Документы Office (временные копии)
+# ====================
+
+~$*.docx
+~$*.xlsx
+*.~docx
+*.~xlsx
