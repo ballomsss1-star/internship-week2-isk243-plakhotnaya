@@ -1,63 +1,43 @@
-# ====================
-# Системные файлы ОС
-# ====================
+# Python
+__pycache__/
+*.pyc
+venv/
+env/
+.venv
 
-# Windows
+# Базы данных
+*.db
+*.sqlite3
+*.pkl
+
+# Секреты
+.env
+*.key
+*.pem
+*.crt
+certs/
+
+# IDE
+.vscode/
+.idea/
+
+# ОС
 Thumbs.db
 desktop.ini
-$RECYCLE.BIN/
-
-# macOS
 .DS_Store
-.AppleDouble
-.LSOverride
-._*
 
-# Linux
-*~
-.swp
-.swx
-.swo
-
-# ====================
-# Файлы среды разработки (IDE)
-# ====================
-
-# VS Code
-.vscode/
-*.code-workspace
-
-# JetBrains (IntelliJ, PyCharm и др.)
-.idea/
-*.iml
-*.iws
-*.ipr
-out/
-
-# Visual Studio
-bin/
-obj/
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
-# ====================
-# Временные файлы и логи
-# ====================
-
+# Логи и временные файлы
 *.log
 *.tmp
-*.temp
 logs/
-tmp/
 temp/
 
-# ====================
-# Документы Office (временные копии)
-# ====================
+# Данные (не в Git)
+data/excel_imports/
+data/xml_exports/
 
-~$*.docx
-~$*.xlsx
-*.~docx
-*.~xlsx
+# Документы (экспортированные)
+*.pdf
+*.png
+*.jpg
+docs/reports/*.pdf

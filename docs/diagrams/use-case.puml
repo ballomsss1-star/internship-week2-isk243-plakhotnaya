@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Бухгалтер" as Accountant
+actor "Главный бухгалтер" as ChiefAccountant
+actor "Руководитель" as Director
+actor "ФНС" as FNS
+
+rectangle "FinTax Pro" {
+  usecase "Сформировать декларацию" as UC1
+  usecase "Загрузить книги покупок/продаж" as UC2
+  usecase "Проверить контрольные соотношения" as UC3
+  usecase "Подписать ЭЦП" as UC4
+  usecase "Отправить в ФНС" as UC5
+  usecase "Получить квитанцию" as UC6
+  
+  Accountant --> UC1
+  Accountant --> UC2
+  Accountant --> UC3
+  ChiefAccountant --> UC4
+  Director --> UC4
+  UC5 --> FNS
+  UC6 <-- FNS
+}
+@enduml

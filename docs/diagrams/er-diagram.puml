@@ -1,0 +1,69 @@
+@startuml
+!theme plain
+
+entity "Организация" {
+  * id : UUID
+  --
+  * ИНН : string
+  * КПП : string
+  * ОГРН : string
+  * Наименование : string
+}
+
+entity "Отчёт" {
+  * id : UUID
+  --
+  * тип : string (НДС/баланс/декларация)
+  * период : date
+  * статус : string
+  * xml_данные : text
+}
+
+entity "Пользователь" {
+  * id : UUID
+  --
+  * ФИО : string
+  * роль : string
+  * email : string
+  * сертификат_ЭЦП : blob
+}
+
+entity "Книга_покупок" {
+  * id : UUID
+  --
+  * номер_счета : string
+  * дата : date
+  * сумма : decimal
+  * НДС : decimal
+}
+
+entity "Счёт_фактура" {
+  * id : UUID
+  --
+  * номер : string
+  * дата : date
+  * сумма : decimal
+  * НДС : decimal
+}
+
+entity "Контрагент" {
+  * id : UUID
+  --
+  * ИНН : string
+  * наименование : string
+}
+
+entity "Журнал_отправки" {
+  * id : UUID
+  --
+  * дата_отправки : datetime
+  * статус : string
+  * квитанция : text
+}
+
+Организация ||--o{ Отчёт
+Организация ||--o{ Пользователь
+Отчёт ||--o{ Журнал_отправки
+Книга_покупок }o--|| Контрагент
+Счёт_фактура }o--|| Контрагент
+@enduml
